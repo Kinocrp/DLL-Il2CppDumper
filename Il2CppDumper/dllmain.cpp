@@ -2,17 +2,6 @@
 #include "Il2Cpp/Il2Cpp.h"
 #include <Windows.h>
 
-static size_t m_cachedAttacker = 0;
-static size_t isMainChar = 0;
-
-bool (*o__ProcessDamage)(void*, void*, void*, void*, bool, void*) = nullptr;
-bool h__ProcessDamage(void* _this, void* effectSource, void* inputTarget, void* targetWrapper, bool isExtraTarget, void* transferredSource) {
-    auto Attacker = IL2CPP::GetFieldPointer<void>(_this, m_cachedAttacker);
-    auto mainChar = IL2CPP::GetFieldValue<bool>(Attacker, isMainChar, true);
-    if (mainChar) return o__ProcessDamage(_this, effectSource, inputTarget, targetWrapper, isExtraTarget, transferredSource);
-    return false;
-}
-
 void MainThread(HMODULE hModule) {
     LOGInit();
 
