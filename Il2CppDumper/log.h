@@ -6,7 +6,7 @@
 
 static HANDLE hMyConsole = INVALID_HANDLE_VALUE;
 
-inline void LogInit() {
+inline void LOGInit() {
     if (!AllocConsole()) return;
 
     hMyConsole = CreateFileA("CONOUT$", GENERIC_WRITE | GENERIC_READ, FILE_SHARE_WRITE | FILE_SHARE_READ, NULL, OPEN_EXISTING, 0, NULL);
@@ -35,7 +35,7 @@ inline void LOG(const char* fmt, ...) {
     WriteConsoleA(hMyConsole, buffer, (DWORD)strlen(buffer), &written, NULL);
 }
 
-inline void LogClose() {
+inline void LOGClose() {
     if (hMyConsole != INVALID_HANDLE_VALUE) {
         CloseHandle(hMyConsole);
         hMyConsole = INVALID_HANDLE_VALUE;

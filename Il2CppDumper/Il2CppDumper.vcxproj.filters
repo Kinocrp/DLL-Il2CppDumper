@@ -13,30 +13,36 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="pch.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="log.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="il2cpp.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <Filter Include="Source Files\Il2Cpp">
+      <UniqueIdentifier>{af619183-71ab-4c38-a0d5-e5422042a83a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Il2Cpp\src">
+      <UniqueIdentifier>{bf5a9f45-e8c1-45cd-bc89-c078b6b73972}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="pch.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Il2Cpp\Il2Cpp.cpp">
+      <Filter>Source Files\Il2Cpp</Filter>
     </ClCompile>
-    <ClCompile Include="il2cpp.cpp">
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="log.h">
       <Filter>Source Files</Filter>
-    </ClCompile>
+    </ClInclude>
+    <ClInclude Include="Il2Cpp\Il2Cpp.h">
+      <Filter>Source Files\Il2Cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="Il2Cpp\src\il2cpp-api-functions.h">
+      <Filter>Source Files\Il2Cpp\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Il2Cpp\src\il2cpp-class.h">
+      <Filter>Source Files\Il2Cpp\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Il2Cpp\src\il2cpp-tabledefs.h">
+      <Filter>Source Files\Il2Cpp\src</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
